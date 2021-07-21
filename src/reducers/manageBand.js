@@ -1,4 +1,4 @@
-import uuid from 'react-uuid'
+import uuid from 'uuid'
 
 export default function manageBand(state = {
   bands: []
