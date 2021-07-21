@@ -9,7 +9,7 @@ export default function manageBand(state = {
 
     case 'DELETE_BAND':
       // let idx = state.bands.findIndex(band => band.id === action.payload);
-      return {bands: [...state.bands.filter(band => band.id != action.payload)]};
+      return {bands: state.bands.filter(band => band.id !== action.payload)};
     default:
       return state;
   }
