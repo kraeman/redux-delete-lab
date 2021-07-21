@@ -5,11 +5,11 @@ export default function manageBand(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
-      return { bands: [...(state.bands), {name: action.payload, id: uuid()}] }
+      return { bands: [...(state.bands), {name: action.name, id: uuid()}] }
 
     case 'DELETE_BAND':
       // let idx = state.bands.findIndex(band => band.id === action.payload);
-      return {bands: state.bands.filter(band => band.id !== action.payload)};
+      return {bands: state.bands.filter(band => band.id !== action.id)};
     default:
       return state;
   }

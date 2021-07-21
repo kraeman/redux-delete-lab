@@ -17,8 +17,8 @@ class BandsContainer extends Component {
 const mapStateToProps = ({ bands }) => ({ bands })
 
 const mapDispatchToProps = dispatch => ({
-  addBand: name => dispatch({ type: "ADD_BAND", payload: name }),
-  deleteBand: id => dispatch({type: "DELETE_BAND", payload: id})
+  addBand: name => dispatch({ type: "ADD_BAND", name: name }),
+  deleteBand: id => dispatch({type: "DELETE_BAND", id: id})
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(BandsContainer)
